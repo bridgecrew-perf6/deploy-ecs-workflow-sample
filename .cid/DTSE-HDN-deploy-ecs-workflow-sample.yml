@@ -1,5 +1,5 @@
 version: 1.0
-name: DTSE-HDN-deploy-ecs-workflow-sample
+name: deploy-ecs-workflow-sample
 language: java
 
 
@@ -18,9 +18,9 @@ machine:
 #  构建脚本
 scripts:
   - mvn package -Dmaven.test.skip=true
-  - docker build -t registry-cbu.huawei.com/dtse-hdn/https://codehub-dg-g.huawei.com/DTSEDeveloper/HDN/deploy-ecs-workflow-sample:${CID_SHORT_UID} .
+  - docker build -t registry-cbu.huawei.com/dtse-hdn/deploy-ecs-workflow-sample:${CID_SHORT_UID} .
   
 #  构建产物
 artifacts:
   image:
-    - registry-cbu.huawei.com/dtse-hdn/https://codehub-dg-g.huawei.com/DTSEDeveloper/HDN/deploy-ecs-workflow-sample:${CID_SHORT_UID}
+    - registry-cbu.huawei.com/dtse-hdn/deploy-ecs-workflow-sample:${CID_SHORT_UID}
